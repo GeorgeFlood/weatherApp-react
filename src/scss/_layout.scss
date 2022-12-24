@@ -1,0 +1,40 @@
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
+  padding: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #003366, #007799, #0099cc);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 65rem;
+
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.84);
+}

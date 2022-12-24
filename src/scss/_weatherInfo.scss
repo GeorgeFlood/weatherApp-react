@@ -1,0 +1,77 @@
+.flexy {
+  display: flex;
+}
+
+.infoBox {
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff, #d1d0cf);
+  margin: auto;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: relative;
+    height: 50rem;
+    width: 50rem;
+    background-color: red;
+    color: red;
+    top: 0;
+    left: 0;
+  }
+}
+
+.weatherInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: none;
+  border-right: 6px solid #007799;
+  flex: 30%;
+}
+
+.info-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  transition: all ease-in-out 0.3s;
+
+  & h4 {
+    font-size: 2rem;
+    transition: all ease-in-out 0.2s;
+  }
+
+  & p {
+    font-size: 1.4rem;
+    padding-right: 1rem;
+    transition: all ease-in-out 0.2s;
+  }
+
+  &:not(:first-child) {
+    border-top: 2px solid #007799;
+  }
+
+  &:hover {
+    background-color: #007799;
+  }
+
+  &:hover svg {
+    width: 6.7rem;
+    height: 6.7rem;
+  }
+
+  &:hover h4 {
+    font-size: 2.1rem;
+  }
+  &:hover p {
+    font-size: 1.5rem;
+  }
+}
+
+svg {
+  width: 6rem;
+  height: 6rem;
+  transition: all ease-in-out 0.2s;
+}
