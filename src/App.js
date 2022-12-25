@@ -10,7 +10,7 @@ const App = function () {
   const [weatherData, setWeatherData] = useState(null); // Declare a new state variable to store the weather data
 
   const capitalizeLocation = (location) => {
-    const words = location.split(" ");
+    const words = location.toLowerCase().split(" ");
     const capitalizedWords = words.map((word) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
     });
