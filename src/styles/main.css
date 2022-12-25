@@ -112,6 +112,11 @@ form {
   font-size: 1.7rem;
 }
 
+.icon {
+  height: 10rem;
+  width: 10rem;
+}
+
 .flexy {
   display: flex;
 }

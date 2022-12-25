@@ -9,18 +9,25 @@ const App = function () {
   const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState(null); // Declare a new state variable to store the weather data
 
+  const capitalizeLocation = (location) => {
+    const words = location.split(" ");
+    const capitalizedWords = words.map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    return capitalizedWords.join(" ");
+  };
+
   const handleSubmit = async (term) => {
     // Call the getWeather function and specify a callback function to handle the resolved promise
     await getWeather(term).then((data) => {
       // Destructure the data from the resolved promise
       const { address, days, description, currentConditions } = data;
       console.log(address, days, description, currentConditions);
-      setLocation(term);
+      const capitalizedLocation = capitalizeLocation(term);
+      setLocation(capitalizedLocation);
       setWeatherData(data);
     });
   };
-
-  console.log(location);
 
   return (
     <div className="container">
