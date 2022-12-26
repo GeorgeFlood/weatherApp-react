@@ -3,7 +3,7 @@ const WeatherInfo = function ({ location, weatherData }) {
 
   let days;
   if (weatherData) {
-    days = weatherData.days.slice(0, 5).map((day, index) => (
+    days = weatherData.days.slice(1, 6).map((day, index) => (
       <div key={index} className="info-col">
         <DaySVG />
         <h4>

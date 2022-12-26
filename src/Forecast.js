@@ -2,7 +2,26 @@ const Forcast = function ({ weatherData, location }) {
   return (
     <div className="forcastContainer">
       <div className="forcast-card">
-        <h1>{location ? location : `I wonder what the weathers like in..`}</h1>
+        <div className="forcast-top">
+          <div
+            className="highs"
+            style={{ display: weatherData ? "block" : "none" }}
+          >
+            <h4>High's</h4>
+            <p>{weatherData ? weatherData.days[0].tempmax : ""}°C</p>
+          </div>
+          <h1 className={weatherData ? "location--active" : ""}>
+            {location ? location : `I wonder what the weathers like in..`}
+          </h1>
+          <div
+            className="highs"
+            style={{ display: weatherData ? "block" : "none" }}
+          >
+            <h4>Low's</h4>
+            <p>{weatherData ? weatherData.days[0].tempmin : ""}°C</p>
+          </div>
+        </div>
+
         <h1 className="temp">
           {weatherData ? weatherData.currentConditions.temp + "°C" : "°C"}
         </h1>
