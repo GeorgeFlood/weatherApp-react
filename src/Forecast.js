@@ -11,7 +11,10 @@ const Forcast = function ({ weatherData, location }) {
             <p>{weatherData ? weatherData.days[0].tempmax : ""}°C</p>
           </div>
           <h1 className={weatherData ? "location--active" : ""}>
-            {location ? location : `I wonder what the weathers like in..`}
+            {location
+              ? `${location} 
+              Today`
+              : `I wonder what the weathers like in..`}
           </h1>
           <div
             className="highs"

@@ -7,7 +7,7 @@ const WeatherInfo = function ({ location, weatherData }) {
       <div key={index} className="info-col">
         <DaySVG />
         <h4>
-          {day.tempmax}°C / {day.tempmin}°C
+          {day.tempmax}°C <span className="tempdivider">/</span> {day.tempmin}°C
         </h4>
         <p>{day.datetime}</p>
       </div>

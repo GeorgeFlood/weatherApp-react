@@ -42,7 +42,7 @@ body {
   display: flex;
   width: 100%;
   height: 7rem;
-  border-bottom: 6px solid #007799;
+  border-bottom: 6px solid #fefefe;
 }
 
 form {
@@ -164,7 +164,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
   background-color: none;
-  border-right: 6px solid #007799;
+  border-right: 6px solid #ffffff;
   flex: 30%;
 }
 
@@ -185,7 +185,7 @@ form {
   transition: all ease-in-out 0.2s;
 }
 .info-col:not(:first-child) {
-  border-top: 2px solid #007799;
+  border-top: 2px solid #ffffff;
 }
 .info-col:hover {
   background-color: #007799;
