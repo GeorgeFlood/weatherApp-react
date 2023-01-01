@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import getWeather from "./api";
 import Search from "./Search";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
+
 import "./styles/main.css";
 
 const App = function () {
@@ -29,6 +30,10 @@ const App = function () {
     });
   };
 
+  const getIcon = (iconName) => {
+    return require(`./icons/${iconName}.svg`);
+  };
+
   return (
     <div className="container">
       <Search
@@ -38,8 +43,16 @@ const App = function () {
       />
       <div className="flexy">
         {/* Pass the weatherData to the WeatherInfo component */}
-        <WeatherInfo location={location} weatherData={weatherData} />
-        <Forecast weatherData={weatherData} location={location} />
+        <WeatherInfo
+          location={location}
+          weatherData={weatherData}
+          getIcon={getIcon}
+        />
+        <Forecast
+          weatherData={weatherData}
+          location={location}
+          getIcon={getIcon}
+        />
       </div>
     </div>
   );

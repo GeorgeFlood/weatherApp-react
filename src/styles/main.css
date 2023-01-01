@@ -131,7 +131,7 @@ form {
   font-size: 1.7rem;
 }
 
-.icon {
+.main-icon {
   height: 10rem;
   width: 10rem;
 }
@@ -201,7 +201,7 @@ form {
   font-size: 1.5rem;
 }
 
-svg {
+.secondary-icon {
   width: 6rem;
   height: 6rem;
   transition: all ease-in-out 0.2s;

@@ -1,11 +1,15 @@
-const WeatherInfo = function ({ location, weatherData }) {
+const WeatherInfo = function ({ location, weatherData, getIcon }) {
   const defaults = [1, 2, 3, 4, 5];
 
   let days;
   if (weatherData) {
     days = weatherData.days.slice(1, 6).map((day, index) => (
       <div key={index} className="info-col">
-        <DaySVG />
+        <img
+          className="secondary-icon"
+          src={getIcon(day.icon)}
+          alt="weather icon"
+        ></img>
         <h4>
           {day.tempmax}°C <span className="tempdivider">/</span> {day.tempmin}°C
         </h4>
