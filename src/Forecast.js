@@ -9,7 +9,9 @@ const Forcast = function ({ weatherData, location, getIcon }) {
             style={{ display: weatherData ? "block" : "none" }}
           >
             <h4>High's</h4>
-            <p>{weatherData ? weatherData.days[0].tempmax : ""}°C</p>
+            <p>
+              {weatherData ? Math.round(weatherData.days[0].tempmax) : ""}°C
+            </p>
           </div>
           <h1
             className={weatherData ? "location--active" : ""}
@@ -25,7 +27,9 @@ const Forcast = function ({ weatherData, location, getIcon }) {
             style={{ display: weatherData ? "block" : "none" }}
           >
             <h4>Low's</h4>
-            <p>{weatherData ? weatherData.days[0].tempmin : ""}°C</p>
+            <p>
+              {weatherData ? Math.round(weatherData.days[0].tempmin) : ""}°C
+            </p>
           </div>
         </div>
 

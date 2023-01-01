@@ -11,7 +11,8 @@ const WeatherInfo = function ({ location, weatherData, getIcon }) {
           alt="weather icon"
         ></img>
         <h4>
-          {day.tempmax}°C <span className="tempdivider">/</span> {day.tempmin}°C
+          {Math.round(day.tempmax)}°C <span className="tempdivider">/</span>{" "}
+          {Math.round(day.tempmin)}°C
         </h4>
         <p>{day.datetime}</p>
       </div>
