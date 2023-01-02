@@ -8,7 +8,7 @@ import "./styles/main.css";
 
 const App = function () {
   const [location, setLocation] = useState("");
-  const [weatherData, setWeatherData] = useState(null); // Declare a new state variable to store the weather data
+  const [weatherData, setWeatherData] = useState(null);
 
   const capitalizeLocation = (location) => {
     const words = location.toLowerCase().split(" ");
@@ -19,9 +19,7 @@ const App = function () {
   };
 
   const handleSubmit = async (term) => {
-    // Call the getWeather function and specify a callback function to handle the resolved promise
     await getWeather(term).then((data) => {
-      // Destructure the data from the resolved promise
       const { address, days, description, currentConditions } = data;
       console.log(address, days, description, currentConditions);
       const capitalizedLocation = capitalizeLocation(term);

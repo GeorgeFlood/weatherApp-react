@@ -47,9 +47,26 @@ const Forcast = function ({ weatherData, location, getIcon }) {
           src={icon}
           alt="weather icon"
         ></img>
-        <p className="conditions">
-          {weatherData ? [weatherData.currentConditions.conditions] : ""}
-        </p>
+
+        <div className="miscellaneous">
+          <div className="dateTime">
+            <p>Last updated local time:</p>
+            <p>
+              {weatherData ? `${weatherData.currentConditions.datetime}` : ""}
+            </p>
+          </div>
+
+          <p className="conditions">
+            {weatherData ? [weatherData.currentConditions.conditions] : ""}
+          </p>
+          <div className="Precipitation">
+            <p>Precipitation</p>
+            <p>
+              {" "}
+              {weatherData ? `${weatherData.currentConditions.precip}` : ""}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

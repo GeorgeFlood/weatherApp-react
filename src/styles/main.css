@@ -128,12 +128,45 @@ form {
 }
 
 .conditions {
-  font-size: 1.7rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .main-icon {
   height: 10rem;
   width: 10rem;
+}
+
+.miscellaneous {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 0.5rem;
+  margin-top: auto;
+}
+
+.dateTime {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.dateTime p {
+  margin-top: -0.5rem;
+}
+
+.conditions {
+  margin-right: 4rem;
+}
+
+.Precipitation {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.Precipitation p {
+  margin-top: -0.5rem;
 }
 
 .flexy {
@@ -190,19 +223,20 @@ form {
 .info-col:hover {
   background-color: #007799;
 }
-.info-col:hover svg {
-  width: 6.7rem;
-  height: 6.7rem;
-}
 .info-col:hover h4 {
   font-size: 2.1rem;
 }
 .info-col:hover p {
   font-size: 1.5rem;
 }
-
-.secondary-icon {
+.info-col:hover .secondary-icon {
   width: 6rem;
   height: 6rem;
+}
+
+.secondary-icon {
+  padding-left: 0.5rem;
+  width: 5.3rem;
+  height: 5.3rem;
   transition: all ease-in-out 0.2s;
 }/*# sourceMappingURL=main.css.map */
