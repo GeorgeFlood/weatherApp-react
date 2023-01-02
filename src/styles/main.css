@@ -108,7 +108,7 @@ form {
   font-size: 1.7rem;
 }
 .forcast-top p {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 
 .location--active {
@@ -119,7 +119,7 @@ form {
 .temp {
   font-size: 5rem;
   color: white;
-  background-color: #007799;
+  background: linear-gradient(to right, #003366, #007799, #0099cc);
   text-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
 }
 

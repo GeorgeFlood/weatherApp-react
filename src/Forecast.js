@@ -60,7 +60,7 @@ const Forcast = function ({ weatherData, location, getIcon }) {
             {weatherData ? [weatherData.currentConditions.conditions] : ""}
           </p>
           <div className="Precipitation">
-            <p>Precipitation</p>
+            <p>Precipitation:</p>
             <p>
               {" "}
               {weatherData ? `${weatherData.currentConditions.precip}` : ""}
