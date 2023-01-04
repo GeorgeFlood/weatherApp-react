@@ -28,17 +28,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
-  height: 78.8%;
+  width: 75vw;
+  height: 79vh;
   background: rgba(255, 255, 255, 0.26);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.84);
-
-  @include respond(big-desk) {
-    width: 65%;
-    height: 80rem;
-  }
+  overflow: hidden;
 }

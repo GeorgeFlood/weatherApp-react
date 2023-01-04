@@ -28,20 +28,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
-  height: 78.8%;
+  width: 75vw;
+  height: 79vh;
   background: rgba(255, 255, 255, 0.26);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.84);
-}
-@media (min-width: 112.5em) {
-  .container {
-    width: 65%;
-    height: 80rem;
-  }
+  overflow: hidden;
 }
 
 .searchContainer {
@@ -87,7 +82,7 @@ form {
 .forcastContainer {
   display: flex;
   flex: 70%;
-  height: 57.5rem;
+  height: 70vh;
 }
 
 .forcast-card {
@@ -192,21 +187,11 @@ form {
   font-size: 1.3rem;
   width: 100%;
 }
-.infoBox::after {
-  content: "";
-  position: relative;
-  height: 50rem;
-  width: 50rem;
-  background-color: red;
-  color: red;
-  top: 0;
-  left: 0;
-}
 
 .weatherInfoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: none;
   border-right: 6px solid #ffffff;
   flex: 30%;
@@ -228,8 +213,8 @@ form {
   padding-right: 1rem;
   transition: all ease-in-out 0.2s;
 }
-.info-col:not(:first-child) {
-  border-top: 2px solid #ffffff;
+.info-col:not(:last-child) {
+  border-bottom: 2px solid #ffffff;
 }
 .info-col:hover {
   background-color: #007799;
