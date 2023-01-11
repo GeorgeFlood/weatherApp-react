@@ -23,13 +23,12 @@ body {
   overflow: hidden;
 }
 
-.container {
+container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75vw;
-  height: 79vh;
   background: rgba(255, 255, 255, 0.26);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -82,7 +81,6 @@ form {
 .forcastContainer {
   display: flex;
   flex: 70%;
-  height: 70vh;
 }
 
 .forcast-card {
@@ -92,7 +90,7 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
-  height: 80%;
+  margin-bottom: 10rem;
   background: rgba(255, 255, 255, 0.39);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

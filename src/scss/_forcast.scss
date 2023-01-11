@@ -1,8 +1,6 @@
 .forcastContainer {
   display: flex;
   flex: 70%;
-  // height: 57.5rem;
-  height: 70vh;
 }
 
 .forcast-card {
@@ -12,8 +10,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
-  // height: 45rem;
-  height: 80%;
+  margin-bottom: 10rem;
   background: rgba(255, 255, 255, 0.39);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
