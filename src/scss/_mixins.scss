@@ -22,3 +22,8 @@
     }
   }
 }
+
+@mixin futureCard($bg-color) {
+  background-color: $bg-color;
+  color: white;
+}
