@@ -1,5 +1,28 @@
-const Forcast = function ({ weatherData, location, getIcon }) {
+import moment from "moment";
+const Forecast = function ({ weatherData, location, getIcon }) {
   const icon = weatherData ? getIcon(weatherData.currentConditions.icon) : null;
+
+  const daysArray = weatherData ? weatherData.days[0].hours : [];
+
+  const futureHours = daysArray
+    .filter((hour) => moment(hour.datetime, "HH:mm:ss").isAfter(moment()))
+    .slice(0, 6)
+    .map((hour, index) => {
+      return (
+        <div key={index} className="hourly">
+          <h4 className="hourly--time">{hour.datetime}</h4>
+          <img
+            src={getIcon(hour.icon)}
+            alt="weather icon"
+            className="hourly--img"
+          />
+          <h4 className="hourly--temp">{hour.temp}</h4>
+        </div>
+      );
+    });
+
+  console.log(futureHours);
+
   return (
     <div className="forcastContainer">
       <div className="forcast-card">
@@ -67,9 +90,10 @@ const Forcast = function ({ weatherData, location, getIcon }) {
             </p>
           </div>
         </div>
+        <div className="hourly--container">{futureHours}</div>
       </div>
     </div>
   );
 };
 
-export default Forcast;
+export default Forecast;
