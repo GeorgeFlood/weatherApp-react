@@ -37,6 +37,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.84);
   overflow: hidden;
 }
+@media (min-width: 112.5em) {
+  .container {
+    width: 65vw;
+  }
+}
 
 .searchContainer {
   display: flex;
@@ -97,11 +102,6 @@ form {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 3px solid rgba(255, 255, 255, 0.84);
-}
-@media (min-width: 112.5em) {
-  .forcast-card {
-    height: 55rem;
-  }
 }
 
 .forcast-top {
@@ -171,6 +171,57 @@ form {
 }
 .Precipitation p {
   margin-top: -0.5rem;
+}
+
+.hourly--container {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid white;
+}
+
+.hourly {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.35rem;
+  width: 10%;
+}
+.hourly:nth-child(1) {
+  background-color: #003c6c;
+  color: white;
+}
+.hourly:nth-child(2) {
+  background-color: #02547e;
+  color: white;
+}
+.hourly:nth-child(3) {
+  background-color: #026384;
+  color: white;
+}
+.hourly:nth-child(4) {
+  background-color: #057294;
+  color: white;
+}
+.hourly:nth-child(5) {
+  background-color: #0088b2;
+  color: white;
+}
+.hourly:nth-child(6) {
+  background-color: #0293c3;
+  color: white;
+}
+.hourly--time {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.hourly--img {
+  width: 3rem;
+  height: 3rem;
+}
+.hourly--temp {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .flexy {
